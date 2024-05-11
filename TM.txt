@@ -1,0 +1,95 @@
+Minimal and flexible web framework for Node.js
+used for building server side web apps and apis
+most popular framework for node
+simplifies process of handling hTTp req and res
+it's a very fast and unopinionated framework
+
+opinionated:
+suggested ways to do things
+usually offer a lot of bells and whistles
+strict folder structure
+django, laravel
+
+unopinionated:
+Diff ways to do same thing
+include bare necessities
+structure folders how u want
+express, flask,
+
+installing:-
+npm init -y
+npm install express
+
+basic index.js file:
+const express = require("express");
+
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send({ message: "hello world" });
+});
+
+app.listen(8000, () => {
+  console.log("server is running  on port 8000");
+});
+
+node index.js 
+http://localhost:8000/
+
+replace scripts this in package.json to enable a watch mode
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "node --watch index"
+  },
+
+npm run dev --> use this
+
+res.sendFile(path.join(__dirname, "public/index.html"));
+__dirname --> current directory
+
+
+// setup static folder
+app.use(express.static(path.join(__dirname, "public")));
+
+just remove the routes and in the addrss bar you have to hit filename.html
+
+for .env file 
+const port = process.env.PORT || 8000;
+
+for dynamic put : before the field ame
+req.params.id -> accessed using
+
+for accessing ueries (after ?)
+use req.query
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
