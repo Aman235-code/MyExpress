@@ -63,6 +63,8 @@ req.params.id -> accessed using
 for accessing ueries (after ?)
 use req.query
 
+colors package:-
+npm install colors
 
 
 
